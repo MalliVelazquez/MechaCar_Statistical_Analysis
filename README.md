@@ -72,6 +72,28 @@ Bellow you can see the t.tests summary:
 ![lot3_ttest](https://user-images.githubusercontent.com/96633294/163883474-adb688c6-30bf-4f48-887f-918c8187bbe0.png)
 
 
+## Study Design: MechaCar vs Competition
+Now lets focus on what it's important, why MechaCar is better than the competition? Why to buy with them. Let's take in consideration that following questions can change the point of view of this analysis to improve or continue company stategies:
+
+### What metric or metrics are we going to test?
+- Price
+- Fuel efficiency
+- mantainance cost
+- Purchasing power of the target consumer
+
+### What is the null hypothesis or alternative hypothesis?
+Null: People with more purchasing power are less interested in price but the rest of the metrics.
+Alternative: People always care about the price vs the rest of the metrics no matter the purchasing power
+
+### What statistical test would you use to test the hypothesis? And why?
+We'll have to make a sample of different buyer target for different car models and analyze the correlation between price vs purchasing power.
+
+### What data is needed to run the statistical test?
+A sample of several consumers showing their earning salary and the model of cars they would buy so we can run linear regressions ans correlations test based on that. 
+
+
+
+
 
 
 
