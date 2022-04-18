@@ -19,3 +19,18 @@ summary(mdl)
 
 #correlations 
 cor(mechaCar, method ="pearson")
+
+
+#Deliverable 2
+
+#Download the Suspension_Coil.csv file, and place it in the active directory for your R session.
+#In your MechaCarChallenge.RScript, import and read in the Suspension_Coil.csv file as a table.
+scoils <- read.csv('Suspension_Coil.csv', stringsAsFactors = F) 
+
+# Write an RScript that creates a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil's PSI column.
+total_summary_df <- scoils %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI))
+
+#Write an RScript that creates a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil's PSI column.
+lot_summary_df <- scoils %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI)) 
+
+
