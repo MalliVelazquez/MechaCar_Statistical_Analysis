@@ -33,4 +33,20 @@ total_summary_df <- scoils %>% summarize(Mean=mean(PSI), Median=median(PSI), Var
 #Write an RScript that creates a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil's PSI column.
 lot_summary_df <- scoils %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI)) 
 
+#Deliverable 3 
 
+# write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically different 
+#from the population mean of 1,500 pounds per square inch.
+t.test(x=scoils$PSI, mu=1500) 
+
+#Lot1 t.test
+pop1 <- subset(scoils, Manufacturing_Lot=='Lot1')
+t.test(x=pop1$PSI, mu=1500)
+
+#Lot2 t.test
+pop2 <- subset(scoils, Manufacturing_Lot=='Lot2')
+t.test(x=pop2$PSI, mu=1500)
+
+#Lot3 t.test
+pop3 <- subset(scoils, Manufacturing_Lot=='Lot3')
+t.test(x=pop3$PSI, mu=1500) 
